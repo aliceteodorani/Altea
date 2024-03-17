@@ -1,0 +1,355 @@
+ @font-face {
+            font-family: "Optimo - Px Grotesk Regular";
+            src: url("fonts/Optimo - Px Grotesk Regular.ttf");
+          }
+/*@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+}*/
+@font-face {
+            font-family: "Optimo - Px Grotesk Light";
+            src: url("fonts/Optimo - Px Grotesk Light.ttf");
+          }
+
+* {
+	
+}
+
+
+
+
+
+.note {
+       cursor:pointer;
+       text-decoration:none;
+        line-height: 0px; 
+}
+.note:hover {color: rgb(150, 150, 150);
+            
+}
+    .collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      padding: 0px;
+      margin-left: 3%;
+    }
+
+    .collapse-content.collapsed {
+      max-height: fit-content;
+      transition: max-height 0.2s ease-in;
+    }
+
+
+
+
+body {
+  font-family: 'Optimo - Px Grotesk Regular','Optimo - Px Grotesk Light',sans-serif; 
+  /*font-size: 11px;
+  line-height: 14px; */
+  margin: 0;
+  padding: 0;
+    /*background-color: rgb(215, 215, 214);*/
+  background-color: rgb(0, 0, 0);
+  
+}
+
+.titolo  {
+color: rgb(256, 256, 256);
+display: inline;
+}
+
+p, a {
+	font-size: 15px;
+  line-height: 17px;
+  color: rgb(256, 256, 256);
+	font-family: Optimo - Px Grotesk Regular, sans-serif;
+	display: inline;
+  text-decoration:none;
+  text-align: center;
+}
+
+.titoloprog p {
+    color: rgb(0, 0, 0);
+}
+
+.titolo p {
+color: rgb(256, 256, 256);
+}
+
+.ca { max-width: 90%; 
+    margin-top: 90px;
+    margin-bottom: 50px;
+    margin-left: 5px;
+}
+.ca p {  text-align: left;
+}
+
+.truncate {
+    overflow: hidden; /* Nasconde il testo in eccesso */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limita il testo a due righe */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis; /* Aggiunge i puntini di sospensione */
+    margin-top: 0;
+}
+
+img, video {
+	max-width: 100%;
+    height: auto;
+}
+
+.sopra p {
+     cursor:pointer;
+     text-decoration:none;
+     transition: color 0.5s; /* Aggiunge una transizione per un effetto di fading */
+}
+.sopra:hover p {
+    color: rgb(150, 150, 150);
+    animation: fadeIn 1s forwards;
+  /*text-decoration: underline;*/
+}
+
+/* Animazione per l'effetto di fading */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Opacità iniziale a 0 */
+    }
+    to {
+        opacity: 1; /* Opacità finale a 1 */
+    }
+}
+
+
+.margine {
+  margin-bottom: 30px;
+}
+
+.margine2 {
+  margin-top: 5px;
+  margin-bottom: 50px;
+
+}
+
+.margine3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+ .margine4 img, video {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.topp{
+    margin-bottom: 40px;
+}
+
+.bott{
+    margin-top: 20px;
+}
+
+.video{}
+
+.fotine {
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 100%;
+    height: auto;
+}
+
+/*–––--–––*/
+/*–––--–––*/
+
+.sticky-text {
+    position: fixed;
+    top: 0px;
+    left: 5px;
+    width: 100%;
+    /*background: rgb(215, 215, 214,50%);*/
+    background: rgb(0, 0, 0,0%) ;
+    mix-blend-mode: difference; /* Imposta l'effetto in negativo */
+    z-index: 1000; /* Assicura che l'elemento sia sopra gli altri contenuti */
+}
+.contento {
+    margin-top: 130px; /* Imposta un margine top pari all'altezza del testo sticky */
+}
+.content2 {
+    margin-top: 68px; /* Imposta un margine top pari all'altezza del testo sticky */
+}
+
+
+/*–––  x testi titoli --–––*/
+
+/*–––--–                 ––*/
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Effetto di transizione, puoi modificare questa linea */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Effetto di transizione, puoi modificare questa linea */
+    }
+}
+
+
+
+/*––––––-----------–*/
+/*COLONNE HOME PAGE*/
+/*–––––-----------––*/
+
+
+ .contenitore {
+            display: flex;
+            flex-wrap: wrap;}
+    .colonna1       {
+            width: 50%; /* Occupa metà della larghezza del contenitore */
+            box-sizing: border-box; /* Considera il padding e il bordo come parte della larghezza */
+            padding-left: 10px;
+            padding-right: 3px;
+            float: left; /* Fallback per i browser meno recenti */}
+    .colonna2       {
+            width: 50%; /* Occupa metà della larghezza del contenitore */
+            box-sizing: border-box; /* Considera il padding e il bordo come parte della larghezza */
+            padding-left: 3px;
+            padding-right: 10px;
+            float: left; /* Fallback per i browser meno recenti */}
+
+  @media (max-width: 1000px) {
+            .colonna1 {
+                width: 100%; /* Le colonne occupano l'intera larghezza su schermi più piccoli */
+                float: none; /* Rimuovi il float */
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .colonna2 {
+                width: 100%; /* Le colonne occupano l'intera larghezza su schermi più piccoli */
+                float: none; /* Rimuovi il float */
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+
+
+.titolomargine      {
+            width: 100%; 
+            box-sizing: border-box;
+            margin-left: 5px;
+            margin-top: 5px;
+            float: left;
+            }
+
+
+
+/*––––––-----------–*/
+/*COLONNE ABOUT*/
+/*–––––-----------––*/
+
+
+ .contenitoree {
+            display: flex;
+            flex-wrap: wrap;}
+    .colonnaa2       {
+            width: 20%; /* Occupa metà della larghezza del contenitore */
+            box-sizing: border-box; /* Considera il padding e il bordo come parte della larghezza */
+            padding-left: 10px;
+            padding-right: 3px;
+            float: left; /* Fallback per i browser meno recenti */}
+    .colonnaa3      {
+            width: 75%; /* Occupa metà della larghezza del contenitore */
+            box-sizing: border-box; /* Considera il padding e il bordo come parte della larghezza */
+            padding-left: 3px;
+            padding-right: 10px;
+            float: left; /* Fallback per i browser meno recenti */}
+
+            @media (max-width: 768px) {
+            .colonnaa2 {
+                width: 20%; /* Le colonne occupano l'intera larghezza su schermi più piccoli */
+                float: none; /* Rimuovi il float */
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .colonnaa3 {
+                width: 75%; /* Le colonne occupano l'intera larghezza su schermi più piccoli */
+                float: none; /* Rimuovi il float */
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .ca {max-width: 100%}
+        }
+
+ 
+
+/*––––––---------------–*/
+/*COLONNE PAGINE SINGOLE*/
+/*–––––---------------––*/
+
+ .contenitore2 {
+            display: flex;
+            flex-wrap: wrap;}
+    .colonn1       {
+            width: 22%; 
+            box-sizing: border-box;
+            margin-left: 5px;
+            margin-top: 5px;
+            float: left;}
+    .colonn2       {
+            width: 22%;
+            box-sizing: border-box;
+            margin-left: 5px;
+            margin-top: 5px;}
+    .colonn3       {
+            width: 22%;
+            box-sizing: border-box;
+            margin-left: 5px;
+            margin-top: 5px;}
+    .colonn4       {
+            width: 30%; 
+            box-sizing: border-box;
+            margin-left: 5px;
+            margin-top: 5px;}
+
+  @media (max-width: 1100px) {
+            .colonn1 {
+                width: 100%; /* Le colonne occupano l'intera larghezza su schermi più piccoli */
+                float: none; /* Rimuovi il float */
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .colonn2 {
+                width: 49%; /* Le colonne occupano l'intera larghezza su schermi più piccoli */
+                float: left; /* Rimuovi il float */
+                box-sizing: border-box;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .colonn3 {
+                width: 49%; /* Le colonne occupano l'intera larghezza su schermi più piccoli */
+                float: left; /* Rimuovi il float */
+                box-sizing: border-box;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .colonn4 {
+                width: 100%; /* Le colonne occupano l'intera larghezza su schermi più piccoli */
+                float: none; /* Rimuovi il float */
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .content2 {
+    margin-top: 270px; /* Imposta un margine top pari all'altezza del testo sticky */}
+            .topp{
+    margin-top: 260px;           
+            }
+} 
+
+
+
+
